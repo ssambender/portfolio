@@ -4,43 +4,65 @@
     <meta charset="UTF-8">
     <title>Sam Bender Portfolio</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="favicon.png" />
 </head>
 
 <body>
-    <div class="blob uiux">
-        <span></span>
-        <span></span>
-        <span></span>
-        <div class="content">
-            <h2>
-                UI/UX
-            </h2>
+    <div id="landingTitle">
+        <div id="overlayTextR">Sam Bender</div>
+        <div id="overlayTextG">Sam Bender</div>
+        <div id="overlayTextRB">Sam Bender</div>
+        <div id="overlayTextGB">Sam Bender</div>
+        <div style="color: #0000ff">Sam Bender</div>
+    </div>
+
+    <div style="display: flex; flex-direction: row">
+        <div class="blob" onclick="uiuxPage();">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+                <h2>
+                    UI/UX
+                </h2>
+            </div>
+        </div>
+        <div class="blob" onclick="gdPage();">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+                <h2>
+                    Graphic Design
+                </h2>
+            </div>
+        </div>
+        <div class="blob" onclick="aboutPage();">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+                <h2>
+                    About
+                </h2>
+            </div>
         </div>
     </div>
 
-    <div class="blob graphicDesign">
-        <span></span>
-        <span></span>
-        <span></span>
-        <div class="content">
-            <h2>
-                Title2
-            </h2>
-            <p>Desc2</p>
-        </div>
-    </div>
+    <a style="position: absolute; bottom: 10px; cursor: pointer;" href="https://github.com/ssambender/portfolio" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="25px;">
+    </a>
 
-    <div class="blob about">
-        <span></span>
-        <span></span>
-        <span></span>
-        <div class="content">
-            <h2>
-                Title3
-            </h2>
-            <p>Link3</p>
-        </div>
-    </div>
+<script src="index.js"></script>
 </body>
 
 </html>
