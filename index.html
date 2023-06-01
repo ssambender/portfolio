@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <div id="backgroundColor"></div>
+
     <div id="landingTitle">
         <div id="overlayTextR">Sam Bender</div>
         <div id="overlayTextG">Sam Bender</div>
@@ -30,7 +32,7 @@
                 </h2>
             </div>
         </div>
-        <div class="blob" onclick="gdPage();">
+        <div class="blob" id="middleBlob" onclick="gdPage();">
             <span></span>
             <span></span>
             <span></span>
@@ -43,7 +45,7 @@
                 </h2>
             </div>
         </div>
-        <div class="blob" onclick="aboutPage();">
+        <div class="blob" id="lastBlob" onclick="aboutPage();">
             <span></span>
             <span></span>
             <span></span>
@@ -58,9 +60,18 @@
         </div>
     </div>
 
-    <a style="position: absolute; bottom: 10px; cursor: pointer;" href="https://github.com/ssambender/portfolio" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="25px;">
-    </a>
+    <div style="position: absolute; bottom: 10px; display: flex;">
+        <a style="cursor: pointer;" href="https://sambender.net" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.logolynx.com/images/logolynx/25/2591e379827f86ede9a6e9ba492c6544.png" width="25px;">
+        </a>
+        <a style="cursor: pointer; margin: 0 10px;"
+           href="https://github.com/ssambender/portfolio" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="25px;">
+        </a>
+        <a style="cursor: pointer;" href="https://dribbble.com/ssambender" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/87/87400.png" width="25px;">
+        </a>
+    </div>
 
 <script src="index.js"></script>
 </body>

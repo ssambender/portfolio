@@ -1,5 +1,5 @@
 if(window.innerHeight > window.innerWidth){
-    alert("Please use Landscape!");
+    console.log("in portrait mode.");
 }
 
 let width;
@@ -24,7 +24,8 @@ const redB = document.getElementById('overlayTextRB');
 const green = document.getElementById('overlayTextG');
 const greenB = document.getElementById('overlayTextGB');
 
-const numX = 30; /* if comment below is uncommented, then change num to 20 */
+// Set to 10, and 0 for no vertical displacement
+const numX = 30;
 const numY = 50;
 
 document.addEventListener("mousemove", function(event) {
@@ -34,6 +35,7 @@ document.addEventListener("mousemove", function(event) {
     displacementX = width/2 - (width - mouseX);
     displacementY = height/2 - (height - 100 - mouseY);
 
+    // Set a max displacement lock
     /*
     if(Math.abs(displacementX) >= width/6) {
         displacementX = width/6 * (displacementX/Math.abs(displacementX));
@@ -57,13 +59,13 @@ document.addEventListener("mousemove", function(event) {
 
 
 function uiuxPage() {
-    alert("ui ux page coming soon");
+    document.location.href = "uiux.html";
 }
 
 function gdPage() {
-    alert("graphic design page coming soon");
+    document.location.href = "graphicdesign.html";
 }
 
 function aboutPage() {
-    alert("about page coming soon");
+    document.location.href = "about.html";
 }

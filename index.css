@@ -11,6 +11,10 @@
     color: #fff;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -18,6 +22,20 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #ffffff;
+    overflow: hidden;
+}
+
+#backgroundColor {
+    /* background-image: url("https://t4.ftcdn.net/jpg/02/66/20/39/360_F_266203971_eGJoakddzdxCNr0776fl7zxS5vE8AMqf.jpg"); bubbles */
+    background-image: url("https://i.gifer.com/origin/68/6830d60058c57bd08deb24573c4ecda4_w200.gif");
+    background-repeat: repeat;
+    opacity: 10%;
+    position: absolute;
+    z-index: 1234;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    pointer-events: none;
 }
 
 #landingTitle {
@@ -50,6 +68,7 @@ body {
 }
 
 /* class for each of the blobs */
+/* blob span code inspired by: https://github.com/atom888 */
 .blob {
     position: relative;
     margin: 0 50px;
@@ -71,7 +90,7 @@ body {
     border: 1px solid black;
     border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
     transition: 0.0s;
-    animation: animate2 10s linear infinite;
+    animation: counterClockwise  10s linear infinite;
 }
 
 .blob:hover span:nth-child(3) {
@@ -90,7 +109,7 @@ body {
     border: 1px solid black;
     border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
     transition: 0.0s;
-    animation: animate 4s linear infinite;
+    animation: clockwise 4s linear infinite;
 }
 
 .blob:hover span:nth-child(2) {
@@ -109,7 +128,7 @@ body {
     border: 1px solid black;
     border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
     transition: 0.0s;
-    animation: animate 6s linear infinite;
+    animation: clockwise 6s linear infinite;
 }
 
 .blob:hover span:nth-child(1) {
@@ -137,7 +156,7 @@ body {
     border: none;
     border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
     transition: 0.0s;
-    animation: animate2 10s linear infinite;
+    animation: counterClockwise  10s linear infinite;
     z-index: -10;
 }
 .blob span:nth-child(5) {
@@ -149,7 +168,7 @@ body {
     border: none;
     border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
     transition: 0.0s;
-    animation: animate 4s linear infinite;
+    animation: clockwise 4s linear infinite;
     z-index: -10;
 }
 .blob span:nth-child(6) {
@@ -161,7 +180,7 @@ body {
     border: none;
     border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
     transition: 0.0s;
-    animation: animate 6s linear infinite;
+    animation: clockwise 6s linear infinite;
     z-index: -10;
 }
 .blob:hover span:nth-child(4), .blob:hover span:nth-child(5), .blob:hover span:nth-child(6) {
@@ -169,10 +188,42 @@ body {
     background: #000000;
 }
 
+/* Changing spin animations to add variety */
+#middleBlob span:nth-child(1), #middleBlob span:nth-child(6) {
+    animation: clockwise 6s linear infinite !important;
+}
+#middleBlob span:nth-child(2), #middleBlob span:nth-child(5) {
+    animation: clockwise 5s linear infinite !important;
+}
+#middleBlob span:nth-child(3), #middleBlob span:nth-child(4) {
+    animation: counterClockwise  8s linear infinite !important;
+}
+#lastBlob span:nth-child(1), #lastBlob span:nth-child(6) {
+    animation: counterClockwise 4.5s linear infinite !important;
+}
+#lastBlob span:nth-child(2), #lastBlob span:nth-child(5) {
+    animation: counterClockwise 9s linear infinite !important;
+}
+#lastBlob span:nth-child(3), #lastBlob span:nth-child(4) {
+    animation: clockwise  7s linear infinite !important;
+}
 
 
 
-@keyframes animate {
+/* Set static RGB displacement for mobile */
+@media all and (orientation: portrait) {
+    #overlayTextR, #overlayTextRB {
+        margin-left: 18px !important;
+        margin-top: 0 !important;
+    }
+    #overlayTextG, #overlayTextGB {
+        margin-left: -18px !important;
+        margin-top: 0 !important;
+    }
+}
+
+/* Spinning animations */
+@keyframes clockwise {
     0% {
         transform: rotate(0deg);
     }
@@ -180,8 +231,7 @@ body {
         transform: rotate(360deg);
     }
 }
-
-@keyframes animate2 {
+@keyframes counterClockwise {
     0% {
         transform: rotate(360deg);
     }
