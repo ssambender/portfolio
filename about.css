@@ -2,3 +2,26 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+/* Transition overlay */
+#transitionOverlayR2, #transitionOverlayG2, #transitionOverlayB2 {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    z-index: 2220;
+    margin-bottom: 0vh;
+    transition: margin-bottom 1s ease;
+    visibility: visible;
+}
+#transitionOverlayG2 {
+    background-color: lime;
+    z-index: 2221;
+    mix-blend-mode: normal;
+}
+#transitionOverlayB2 {
+    background-color: blue;
+    z-index: 2222;
+    mix-blend-mode: normal;
+}

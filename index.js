@@ -58,6 +58,25 @@ document.addEventListener("mousemove", function(event) {
 
 
 
+function pageTransition(page) {
+    let destination = page;
+    destination = destination + '.html';
+
+    document.getElementById('transitionOverlayR').style.visibility = 'visible';
+    document.getElementById('transitionOverlayR').style.marginTop = '0vh';
+    setTimeout(function(){
+        document.getElementById('transitionOverlayG').style.visibility = 'visible';
+        document.getElementById('transitionOverlayG').style.marginTop = '0vh';
+        setTimeout(function(){
+            document.getElementById('transitionOverlayB').style.visibility = 'visible';
+            document.getElementById('transitionOverlayB').style.marginTop = '0vh';
+            setTimeout(function(){
+                document.location.href = destination;
+            }, 1000);
+        }, 60);
+    }, 60);
+}
+
 function uiuxPage() {
     document.location.href = "uiux.html";
 }
@@ -67,5 +86,6 @@ function gdPage() {
 }
 
 function aboutPage() {
-    document.location.href = "about.html";
+    //document.location.href = "about.html";
+    pageTransition('about');
 }
