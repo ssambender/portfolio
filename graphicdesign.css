@@ -2,3 +2,63 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: black;
+    height: 5vh;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    overflow: hidden;
+}
+
+#headerCenter {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 23%;
+    max-width: 25%;
+    padding: 0 0px;
+}
+
+.column img {
+    margin-top: 0px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media all and (orientation: portrait) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

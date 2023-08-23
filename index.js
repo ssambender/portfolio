@@ -56,6 +56,15 @@ document.addEventListener("mousemove", function(event) {
     greenB.style.marginTop = displacementY/numY * -1 + 'px';
 });
 
+// Run just once
+red.style.marginLeft = -355/numX + 'px';
+redB.style.marginLeft = -355/numX + 'px';
+green.style.marginLeft = -355/numX * -1 + 'px';
+greenB.style.marginLeft = -355/numX * -1 + 'px';
+red.style.marginTop = 355/numY + 'px';
+redB.style.marginTop = 355/numY + 'px';
+green.style.marginTop = 355/numY * -1 + 'px';
+greenB.style.marginTop = 355/numY * -1 + 'px';
 
 
 function uiuxPage() {
