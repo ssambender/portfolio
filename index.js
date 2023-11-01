@@ -25,8 +25,8 @@ const green = document.getElementById('overlayTextG');
 const greenB = document.getElementById('overlayTextGB');
 
 // Set to 10, and 0 for no vertical displacement
-const numX = 30;
-const numY = 50;
+const numX = 20;
+const numY = 30;
 
 document.addEventListener("mousemove", function(event) {
     mouseX = event.clientX;
@@ -77,4 +77,8 @@ function gdPage() {
 
 function aboutPage() {
     document.location.href = "about.html";
+}
+
+function codingPage() {
+    console.log("DNE");
 }

@@ -208,6 +208,16 @@ body {
     animation: clockwise  7s linear infinite !important;
 }
 
+#codingBlob span:nth-child(1), #codingBlob span:nth-child(6) {
+    animation: counterClockwise 8s linear infinite !important;
+}
+#codingBlob span:nth-child(2), #codingBlob span:nth-child(5) {
+    animation: clockwise 7.5s linear infinite !important;
+}
+#codingBlob span:nth-child(3), #codingBlob span:nth-child(4) {
+    animation: counterClockwise  5s linear infinite !important;
+}
+
 /* Set static RGB displacement for mobile */
 @media all and (orientation: portrait) {
     #overlayTextR, #overlayTextRB {

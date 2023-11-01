@@ -9,7 +9,7 @@ a {
     cursor: pointer;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 header {
@@ -34,12 +34,15 @@ header {
     display: none;
 }
 
+::selection {
+    background: rgba(0, 0, 0, 0.1);
+}
 
-
-.row {
+.rows {
     display: flex;
     flex-wrap: wrap;
     padding: 0 0px;
+    overflow: hidden;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -47,6 +50,7 @@ header {
     flex: 23%;
     max-width: 25%;
     padding: 0 0px;
+    overflow: hidden;
 }
 
 .column img {
@@ -61,4 +65,77 @@ header {
         flex: 100%;
         max-width: 100%;
     }
+}
+
+/* each graphic design item (square picture) */
+.gdItem {
+    overflow: hidden; /* Add overflow: hidden to crop the zoomed-out portions */
+
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .4s ease;
+    position: relative;
+
+    color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    font-size: 100px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.gdItem:hover {
+    transition: .4s ease;
+    color: #ffffff;
+    font-size: 34px;
+}
+
+.gdItem img {
+    transition: .6s ease;
+    height: 100%;
+    object-fit: cover; /* This property ensures the image maintains aspect ratio while fitting within the container */
+}
+.gdItem:hover img {
+    transition: .6s ease;
+    transform: scale(1.2); /* Increase the scale factor to zoom in */
+    position: relative;
+    z-index: 1; /* Set a higher z-index to make the hovered image appear on top */
+    filter: brightness(.4);
+}
+
+.gdItemText {
+    position: absolute;
+    z-index: 5;
+}
+
+
+
+
+
+.text {
+    position: relative;
+    user-select: none;
+}
+.red,
+.green,
+.blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    user-select: none;
+}
+.red {
+    color: #ff0000;
+}
+.green {
+    color: #00ff00;
+    z-index: 1;
+    transform: translate(-3px, 0px);
+}
+.blue {
+    color: #0000ff;
+    z-index: 2;
+    transform: translate(3px, 0px);
 }

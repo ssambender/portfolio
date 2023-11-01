@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: black;
+    height: 5vh;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    overflow: hidden;
+}
+
+#headerCenter {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+    overflow: hidden;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 23%;
+    max-width: 25%;
+    padding: 0 0px;
+    overflow: hidden;
+}
+
+.column img {
+    margin-top: 0px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media all and (orientation: portrait) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* each graphic design item (square picture) */
+.gdItem {
+    overflow: hidden; /* Add overflow: hidden to crop the zoomed-out portions */
+
+    aspect-ratio: 1;
+
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .4s ease;
+    position: relative;
+}
+
+.gdItem img {
+    transition: transform .4s ease;
+    height: 100%;
+    object-fit: cover; /* This property ensures the image maintains aspect ratio while fitting within the container */
+}
+
+.gdItem:hover {
+    filter: brightness(.4);
+    transition: .4s ease;
+}
+
+.gdItem:hover img {
+    transform: scale(1.2); /* Increase the scale factor to zoom in */
+    position: relative;
+    z-index: 1; /* Set a higher z-index to make the hovered image appear on top */
+    transition: .4s ease;
+}

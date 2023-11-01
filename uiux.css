@@ -9,7 +9,11 @@ a {
     cursor: pointer;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -32,4 +36,34 @@ header {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+
+
+
+.text {
+    position: relative;
+    user-select: none;
+}
+.red,
+.green,
+.blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    user-select: none;
+}
+.red {
+    color: #ff0000;
+}
+.green {
+    color: #00ff00;
+    z-index: 1;
+    transform: translate(-3px, 0px);
+}
+.blue {
+    color: #0000ff;
+    z-index: 2;
+    transform: translate(3px, 0px);
 }
