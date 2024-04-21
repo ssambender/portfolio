@@ -9,7 +9,6 @@ let timer;
 function changePic(num) {
     currentFrame = num;
     updatePic();
-    //clearTimeout(timer);
 }
 
 function updatePic() {
