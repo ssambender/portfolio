@@ -6,7 +6,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
+    cursor: default;
 }
 a:hover {
     text-decoration: none;
